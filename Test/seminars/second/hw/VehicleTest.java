@@ -38,21 +38,21 @@ class VehicleTest {
     }
     // 3.4 Проверка того, что объект Car развивает скорость 60 в режиме тестового вождения (testDrive())
     @Test
-    void testCarSpeedTestDrive() {
+    void checkCarSpeedTestDrive() {
         car.testDrive();
         assertThat(car.getSpeed()).isEqualTo(60);
     }
 
     // 3.5 Проверка того, что объект Motorcycle развивает скорость 75 в режиме тестового вождения (testDrive())
     @Test
-    void testMotorcycleSpeedTestDrive() {
+    void checkMotorcycleSpeedTestDrive() {
         motorcycle.testDrive();
         assertThat(motorcycle.getSpeed()).isEqualTo(75);
     }
 
     // 3.6 Проверить, что в режиме парковки (сначала testDrive, потом park, т.е эмуляция движения транспорта) машина останавливается (speed = 0)
     @Test
-    void testCarParcSpeed() {
+    void checkCarParkSpeed() {
         car.testDrive();
         car.park();
         assertThat(car.getSpeed()).isEqualTo(0);
@@ -60,7 +60,7 @@ class VehicleTest {
 
     // 3.7 Проверить, что в режиме парковки (сначала testDrive, потом park  т.е эмуляция движения транспорта) мотоцикл останавливается (speed = 0)
     @Test
-    void testMotorcycleParcSpeed() {
+    void checkMotorcycleParkSpeed() {
         motorcycle.testDrive();
         motorcycle.park();
         assertThat(motorcycle.getSpeed()).isEqualTo(0);
