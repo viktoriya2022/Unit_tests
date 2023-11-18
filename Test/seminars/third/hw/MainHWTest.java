@@ -20,12 +20,12 @@ public class MainHWTest {
     // Метод проверяет, является ли целое число записанное в переменную n, чётным (true) либо нечётным (false).
 
     @Test
-    void oddNumber(){
+    void oddNumberTest(){
         assertThat(mainHW.evenOddNumber(4)).isTrue();
     }
 
     @Test
-    void notOddNumber(){
+    void notOddNumberTest(){
         assertThat(mainHW.evenOddNumber(3)).isFalse();
     }
 
